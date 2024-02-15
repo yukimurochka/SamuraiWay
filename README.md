@@ -1,1 +1,1 @@
-мой путь самурая в id-incubator
+мой путь самурая в it-incubator
