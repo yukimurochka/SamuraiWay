@@ -1,8 +1,14 @@
 .nav {
     grid-area: n;
     background-color: rgb(75, 75, 75);
+    padding: 20px;
   }
 
-  .item {
+  .item a {
     color: white;
+    text-decoration: none;
+  }
+
+  .item a:hover {
+    color: rgb(190, 190, 190);
   }
