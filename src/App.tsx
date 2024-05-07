@@ -5,11 +5,17 @@ import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { StateType } from './redux/state';
 
-let DialogsHandler = () => <Dialogs/>
-let ProfileHandler = () => <Profile/>
+type AppPropsType = {
+  state: StateType
+  addPost: (text: string) => void
+}
 
-function App() {
+const App = (props: AppPropsType) => {
+  let DialogsHandler = () => <Dialogs state={props.state.dialogsPage}/>
+  let ProfileHandler = () => <Profile state={props.state.profilePage} addPost={props.addPost}/>
+  
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
